@@ -17,7 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Desafio_Criptografia.Core\Desafio_Criptografia.Core.csproj" />
     <ProjectReference Include="..\Desafio_Criptografia.Web\Desafio_Criptografia.Web.csproj" />
-    <ProjectReference Include="..\Desafio_Criptografia\Desafio_Criptografia.csproj" />
+    <ProjectReference Include="..\Desafio_Criptografia\Desafio_Criptografia.Console.csproj" />
   </ItemGroup>
 
 </Project>

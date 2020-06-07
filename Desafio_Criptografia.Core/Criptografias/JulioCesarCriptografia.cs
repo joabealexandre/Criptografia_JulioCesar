@@ -11,6 +11,11 @@ namespace Desafio_Criptografia.Core.Criptografias
         private readonly int fator; //Fator de substituição
         private AlfabetoService alfabetoService;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="alfabetoService">Serviço para obter o alfabeto a ser utilizado</param>
+        /// <param name="fator">Fator de substituição</param>
         public JulioCesarCriptografia(AlfabetoService alfabetoService, int fator)
         {
             this.fator = fator;

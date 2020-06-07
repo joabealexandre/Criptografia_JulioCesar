@@ -15,15 +15,21 @@ namespace Desafio_Criptografia.Web.Controllers
 {
     public class RequisicaoWebController
     {
-        private string urlRequisicaoGet = @"https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token=";
-        private string urlRequisicaoPost = @"https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=";
-        private const string TOKEN = "0ac32b8ba008dd4501180cbb2b0a349709068255";
+        private readonly string _urlRequisicaoGet;
+        private readonly string _urlRequisicaoPost;
+        private readonly string _token;
 
+        public RequisicaoWebController(string token, string urlRequisicaoGet, string urlRequisicaoPost)
+        {
+            _token = token;
+            _urlRequisicaoGet = urlRequisicaoGet;
+            _urlRequisicaoPost = urlRequisicaoPost;
+        }
 
         public string GetDadosJson()
         {
             var json = "";
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(urlRequisicaoGet + TOKEN);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(_urlRequisicaoGet + _token);
 
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
             using (Stream stream = response.GetResponseStream())
@@ -35,9 +41,9 @@ namespace Desafio_Criptografia.Web.Controllers
             return json;
         }
 
-        public async void PostResultJson(string json, string filepath)
+        public async void PostResultJson(string filepath)
         {
-            var url = urlRequisicaoPost + TOKEN;
+            var url = _urlRequisicaoPost + _token;
             var fyleArray = File.ReadAllBytes(filepath);
             var filename = "answer.json";
             var contentType = "multipart/form-data";
