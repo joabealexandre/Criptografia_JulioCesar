@@ -102,7 +102,7 @@ namespace Desafio_Criptografia
                 Console.Clear();
                 Console.WriteLine("Selecione uma opção:");
                 Console.WriteLine("1 - Download arquivo JSON API (GET)");
-                Console.WriteLine("2 - Decrifar texto - Atualizar JSON");
+                Console.WriteLine("2 - Decifrar texto - Atualizar JSON");
                 Console.WriteLine("3 - Enviar arquivo JSON (POST)");
                 Console.WriteLine("0 - Sair");
                 opcao = Console.ReadLine();

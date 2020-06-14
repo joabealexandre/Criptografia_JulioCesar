@@ -7,7 +7,7 @@
 
 
 Realizar o build da solução para que o arquivo answer.json seja adicionado ao diretório para leitura.  
-Selecione a opção "2 - Decrifar texto - Atualizar JSON" para decifrar o texto criptografado e salvar a mensagem no arquivo answer.json. 
+Selecione a opção "2 - Decifrar texto - Atualizar JSON" para decifrar o texto criptografado e salvar a mensagem no arquivo answer.json. 
 
 ### Criptografia de Júlio César
 
